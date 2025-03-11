@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.orders{
+        background-color: aqua;
+        border: 2px solid black;
+        }
+        </style>
+</head>
+<body>
+    <h1>your orders</h1>
+    {%for i in order%}
+  
+    <div class="orders">
+    <div>order_no:{{i.order_no}} </div>
+    <div>product_id:{{i.product_id}} </div>
+    <div>order_by:{{i.order_by}}</div>
+    <div>time:{{i.time}} </div>
+    <div>product_id:{{i.product_id}}</div>
+    <div>status:{{i.status}}</div>
+    <div>address:{{i.address}} </div>
+    </div>
+    {%endfor%}
+</body>
+</html>

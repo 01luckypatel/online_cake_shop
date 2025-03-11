@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.orders{
+        background-color: aqua;
+        border: 2px solid black;
+        }
+        
+        .addproduct{
+            background-color: aqua;
+            border: 2px solid black;
+            }
+            </style>
+</head>
+<body>
+    <a href="/admin_logout">admin_logout</a>
+    <div class="addproduct">
+        <p>ADD PRODUCT:</p>
+        <form action="/admin_panel" method="post">
+            
+                <input type="text" name="productname" id="" placeholder="productname">
+                <input type="text" name="productprice" id="" placeholder="productprice">
+                <input type="text" name="productdiscription" id="" placeholder="productdiscription">
+                
+                <input type="submit" value="Submit">
+              
+
+
+
+
+
+
+        </form>
+
+    </div>
+    <div class="orderdiv">
+        <h1>orders</h1>
+    {%for i in order%}
+  
+    <div class="orders">
+    <div>order_no:{{i.order_no}} </div>
+    <div>product_id:{{i.product_id}} </div>
+    <div>order_by:{{i.order_by}}</div>
+    <div>time:{{i.time}} </div>
+    <div>product_id:{{i.product_id}}</div>
+    <div>status:{{i.status}}</div>
+    <div>address:{{i.address}} </div>
+    </div>
+    {%endfor%}
+
+    </div>
+</body>
+</html>

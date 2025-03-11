@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {{ email }}
+
+    <div class="nav"><a href="/welcome">home</a>
+    <a href="/orders">orders</a>
+    <a href="/about">about</a>
+    <a href="/cart">cart</a>
+    <a href="/logout">logout</a></div>
+
+    <div class="items">
+        
+        {%for i in product%}
+        <div class="item">
+           
+        <div>product_id:{{i.sno}} </div>
+        <div>product_name:{{i.product_name}} </div>
+        <div>product_price:{{i.product_price}}</div>
+        <a href="/ordered?sno={{i.sno}}">order</a>
+        <a href="/addcart?sno={{i.sno}}">add cart</a>
+            
+        </a>
+        
+        </div>
+        {%endfor%}
+        
+
+    </div>
+    
+
+
+</body>
+</html>

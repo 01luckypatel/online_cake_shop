@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .reg{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .login{
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .logasadmin{
+            background-color: rgb(47, 234, 0);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="reg"> 
+    <p>Register:</p>
+    <form action="/" method="post">
+        <input type="email" name="email" id="" placeholder="Enter email">
+        <input type="text" name="password" id="" placeholder="Enter password">
+        <input type="submit" value="submit">
+        
+    </form>
+    </div>
+   
+    <div class="login">
+    already a user?
+    <a href="/login">login</a>
+    </div>
+    <div class="logasadmin"><a href="/admin">login as admin</a></div>
+    
+</body>
+</html>

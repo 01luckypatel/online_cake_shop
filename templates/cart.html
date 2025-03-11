@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    hi cart page here
+    
+    {%for i in its%}
+  
+    <div class="cart">
+    
+    <div>product_id:{{i.product_id}} </div>
+  
+    </div>
+    {%endfor%}
+    {%for i in productinfo%}
+  
+    <div class="orders">
+  
+    <div>product_id:{{i.product_name}} </div>
+    <div>product_id:{{i.product_id}}</div>
+    <div>address:{{i.product_price}} </div>
+    </div>
+    {%endfor%}
+
+</body>
+</html>
